@@ -1,4 +1,4 @@
-### 🔗 This setup includes the following tools out of the box:
+### Guide to Setting Up Tools in an Angular Project
 
 - **Tailwind CSS** – Utility-first CSS framework for modern UIs
 - **ESLint** – Linter for TypeScript and Angular templates
@@ -12,4 +12,6 @@
 
 ---
 
-🔗 **For reference, see the sample project at:** [https://github.com/namnguyen2k1/angular-bootstrap-boilerplate](https://github.com/namnguyen2k1/angular-bootstrap-boilerplate)
+**For reference, see the sample project at:**
+
+- [Angular Bootstrap Boilerplate](https://github.com/namnguyen2k1/angular-bootstrap-boilerplate)
