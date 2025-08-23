@@ -1,14 +1,12 @@
 ### Prettier (Angular)
 
-#### Cài đặt Prettier:
+- Install packages:
 
 ```bash
 npm install --save-dev prettier
 ```
 
----
-
-#### Thêm script vào `package.json`:
+- Add script to `package.json`:
 
 ```json
 {
@@ -18,9 +16,7 @@ npm install --save-dev prettier
 }
 ```
 
----
-
-#### Tạo file cấu hình `.prettierrc`:
+- Create `.prettierrc` file:
 
 ```json
 {
@@ -36,8 +32,7 @@ npm install --save-dev prettier
 
 ---
 
-#### 5. Chạy lệnh format:
+### References
 
-```bash
-npm run format
-```
+- [[NPM] Prettier](https://www.npmjs.com/package/prettier)
+- [[VS Code] Prettier Extension ](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
