@@ -1,23 +1,24 @@
 ### ESLint (Angular)
 
-#### Cài đặt ESLint cho Angular:
+- Install packages:
 
 ```bash
 ng add angular-eslint
 ```
 
-Lệnh này sẽ tự động:
+This command will automatically:
 
-- Cài đặt các thư viện liên quan: `angular-eslint`, `eslint`, `typescript-eslint`, v.v.
-- Tạo file cấu hình `eslint.config.js`
-- Cập nhật `angular.json` để sử dụng ESLint thay vì TSLint (nếu trước đó có)
+- Install related packages: `angular-eslint`, `eslint`, `typescript-eslint`, etc.
+- Generate the `eslint.config.js` configuration file
+- Update `angular.json`
 
 ---
 
-#### 2. File `eslint.config.js` ví dụ:
+### Detailed Configuration
+
+- `eslint.config.js` file:
 
 ```js
-// @ts-check
 const eslint = require('@eslint/js');
 const tseslint = require('typescript-eslint');
 const angular = require('angular-eslint');
@@ -32,43 +33,17 @@ module.exports = tseslint.config(
       ...angular.configs.tsRecommended
     ],
     processor: angular.processInlineTemplates,
-    rules: {
-      '@angular-eslint/directive-selector': [
-        'warn',
-        {
-          type: 'attribute',
-          prefix: 'app',
-          style: 'camelCase'
-        }
-      ],
-      '@angular-eslint/component-selector': [
-        'warn',
-        {
-          type: 'element',
-          prefix: 'app',
-          style: 'kebab-case'
-        }
-      ],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-empty-function': 'warn',
-      '@typescript-eslint/no-unsafe-function-type': 'warn'
-    }
+    rules: {}
   },
   {
     files: ['**/*.html'],
     extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
-    rules: {
-      '@angular-eslint/template/label-has-associated-control': 'warn'
-    }
+    rules: {}
   }
 );
 ```
 
----
-
-#### Cấu hình `angular.json`:
-
-Thêm mục `lint` trong phần cấu hình của project:
+- `angular.json` includes a `lint` section:
 
 ```json
 {
@@ -81,9 +56,7 @@ Thêm mục `lint` trong phần cấu hình của project:
 }
 ```
 
----
-
-#### Thêm script vào `package.json`:
+- Add script to `package.json`:
 
 ```json
 {
@@ -95,8 +68,4 @@ Thêm mục `lint` trong phần cấu hình của project:
 
 ---
 
-#### Chạy lệnh lint:
-
-```bash
-npm run lint
-```
+### References
