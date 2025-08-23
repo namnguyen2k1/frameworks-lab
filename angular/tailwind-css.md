@@ -1,16 +1,12 @@
 ### TailwindCSS (Angular)
 
-#### Cài đặt các gói cần thiết:
+- Install packages:
 
 ```bash
 npm install tailwindcss @tailwindcss/postcss postcss
 ```
 
----
-
-#### Cấu hình PostCSS:
-
-Tạo file `.postcssrc.json` hoặc `postcss.config.mjs` ở thư mục gốc Angular:
+- Create `.postcssrc.json` file:
 
 ```json
 // .postcssrc.json
@@ -21,34 +17,27 @@ Tạo file `.postcssrc.json` hoặc `postcss.config.mjs` ở thư mục gốc An
 }
 ```
 
----
-
-#### Thiết lập Tailwind trong `styles.scss`
-
-- Trong `src/styles.scss`:
+- Update `styles.scss`:
 
 ```scss
 @use 'tailwindcss';
+// @tailwind base;
+// @tailwind theme;
+// @tailwind utilities;
 ```
 
-- Tương đương với khai báo từng phần:
-
-```scss
-@tailwind base; // gồm reset.css
-@tailwind theme;
-@tailwind utilities; // thường chỉ dùng utilities
-```
-
----
-
-#### Kiểm tra cấu hình trong `angular.json`:
+- Verify configuration in `angular.json`:
 
 ```json
 "styles": ["src/styles.scss"]
 ```
 
-#### Sử dụng:
+---
+
+### Usage
+
+- In HTML template:
 
 ```html
-<h1 class="text-3xl font-bold underline">Hello Angular + Tailwind!</h1>
+<div class="font-bold text-[green]">Hello Angular + Tailwind!</div>
 ```
