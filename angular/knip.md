@@ -1,15 +1,12 @@
-### 🧹 Knip – Unused Files & Dependencies Detector (Angular)
+### Knip (Angular)
 
-#### 1. Cài đặt Knip:
+- Install packages:
 
 ```bash
-# Tham khảo: https://knip.dev/overview/getting-started
 npm install --save-dev knip
 ```
 
----
-
-#### 2. Thêm script vào `package.json`:
+- Add script to `package.json`:
 
 ```json
 {
@@ -21,18 +18,7 @@ npm install --save-dev knip
 
 ---
 
-#### ✅ Giải thích tuỳ chọn:
+### References
 
-- `--cache`: sử dụng cache để tăng tốc các lần kiểm tra sau.
-- `--reporter symbols`: hiển thị báo cáo chi tiết với biểu tượng rõ ràng.
-- `--performance`: hiển thị thông tin về thời gian và hiệu năng.
-
----
-
-Giờ bạn có thể chạy:
-
-```bash
-npm run knip
-```
-
-Để quét và phát hiện các **file, export, hoặc dependency không dùng đến** ✨
+- [[Guide] Knip](https://knip.dev/overview/getting-started)
+- [[NPM] Knip](https://www.npmjs.com/package/knip)
