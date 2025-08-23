@@ -1,18 +1,12 @@
-### ✅ Commit Lint Setup
+### Commitlint (Angular)
 
-#### 1. Cài đặt commitlint với cấu hình Angular:
+- Install packages:
 
 ```bash
-# Tham khảo:
-# - https://www.npmjs.com/package/@commitlint/config-angular
-# - Angular commit conventions: https://github.com/angular/angular/blob/main/contributing-docs/commit-message-guidelines.md
-
 npm install --save-dev @commitlint/config-angular @commitlint/cli
 ```
 
----
-
-#### 2. Tạo file cấu hình `commitlint.config.js`:
+- Create the `commitlint.config.js` file:
 
 ```js
 // commitlint.config.js
@@ -21,21 +15,22 @@ module.exports = {
 };
 ```
 
----
-
-#### 3. Tạo file hook `commit-msg` trong thư mục `.husky`:
+- Create the `commit-msg` file inside the `.husky` folder:
 
 ```bash
 # .husky/commit-msg
 npx commitlint --edit
 ```
 
-> 📌 Đảm bảo thư mục `.husky` đã được thiết lập (sử dụng `husky install` nếu chưa có).
-
----
-
-#### 4. Cấp quyền thực thi cho file hook:
+- Grant execute permission to `commit-msg`:
 
 ```bash
 chmod +x .husky/commit-msg
 ```
+
+---
+
+### References
+
+- [[NPM] Commitlint Config Angular](https://www.npmjs.com/package/@commitlint/config-angular)
+- [[Guide] Angular Commit Message](https://github.com/angular/angular/blob/main/contributing-docs/commit-message-guidelines.md)
