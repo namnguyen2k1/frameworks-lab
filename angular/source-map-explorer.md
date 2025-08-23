@@ -1,30 +1,17 @@
-### 📊 Source Map Explorer (Angular)
+### Source Map Explorer (Angular)
 
-#### 1. Cài đặt thư viện:
+- Install packages:
 
 ```bash
-# Tham khảo: https://www.npmjs.com/package/source-map-explorer
 npm install --save-dev source-map-explorer
 ```
 
----
-
-#### 2. Bật source map trong cấu hình `angular.json`:
-
-Tìm đến phần `configurations.production` của project và thêm:
-
-```json
-{
-  "sourceMap": true
-}
-```
-
-Ví dụ:
+- Enable `sourceMap` in `angular.json` configuration:
 
 ```json
 {
   "projects": {
-    "angular-bb": {
+    "[your-project-name]": {
       "architect": {
         "build": {
           "configurations": {
@@ -39,26 +26,18 @@ Ví dụ:
 }
 ```
 
----
-
-#### 3. Thêm script vào `package.json`:
-
-> ⚠️ Thay `angular-bb` bằng tên project thực tế của bạn.
+- Add script to `package.json`:
 
 ```json
 {
   "scripts": {
-    "analyze": "ng build --configuration production && source-map-explorer dist/angular-bb/**/*.js"
+    "analyze": "ng build --configuration production && source-map-explorer dist/[your-project-name]/**/*.js"
   }
 }
 ```
 
 ---
 
-Giờ bạn có thể chạy:
+### References
 
-```bash
-npm run analyze
-```
-
-Để kiểm tra dung lượng và phân tích chi tiết các bundle file 🎯
+- [[NPM] Source Map Explorer](https://www.npmjs.com/package/source-map-explorer)
