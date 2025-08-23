@@ -1,51 +1,38 @@
-### 🛡️ Husky + Lint-Staged (Angular)
+### Husky + Lint-Staged (Angular)
 
-#### 1. Cài đặt thư viện:
+- Install packages:
 
 ```bash
 npm install --save-dev husky lint-staged
 ```
 
----
-
-#### 2. Khởi tạo Husky:
+- Create `.husky` folder:
 
 ```bash
 npx husky
 ```
 
-Lệnh này sẽ tạo thư mục `.husky` và cấu hình git hook.
-
----
-
-#### 3. Tạo file hook `pre-commit`:
+- Create the `pre-commit` file inside the `.husky` folder:
 
 ```bash
-npx husky add .husky/pre-commit "npx lint-staged"
-```
-
-Hoặc tự tạo file `.husky/pre-commit` với nội dung sau:
-
-```bash
+# .husky/pre-commit
 npx lint-staged
 ```
 
-> Đừng quên cấp quyền thực thi cho file hook:
+- Grant execute permission to `pre-commit`:
 
 ```bash
 chmod +x .husky/pre-commit
 ```
 
----
-
-#### 4. Cập nhật `package.json`:
+- Update `package.json`:
 
 ```json
 {
   "scripts": {
     "lint": "eslint --fix",
     "format": "prettier --write",
-    "prepare": "husky"
+    "prepare": "npx husky"
   },
   "lint-staged": {
     "*.{ts,html,scss}": ["npm run lint", "npm run format"]
@@ -55,7 +42,7 @@ chmod +x .husky/pre-commit
 
 ---
 
-#### ✅ Giải thích:
+#### References
 
-- `prepare`: được chạy sau khi cài `npm install`, giúp tự động setup Husky.
-- `lint-staged`: chỉ lint & format những file thay đổi, giúp nhanh và hiệu quả.
+- [[NPM] Husky](https://www.npmjs.com/package/husky)
+- [[NPM] Lint-Staged](https://www.npmjs.com/package/lint-staged)
