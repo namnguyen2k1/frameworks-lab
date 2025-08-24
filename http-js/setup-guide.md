@@ -1,4 +1,4 @@
-## Setup Node.js Project with Express
+## Setup Node.js Project with HTTP
 
 - Create project folder:
 
