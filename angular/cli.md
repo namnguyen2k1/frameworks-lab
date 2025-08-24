@@ -15,6 +15,8 @@ ng g s my-service
 ng --help
 ```
 
+---
+
 ### References
 
 - [[Guide] Angular Official Documentation](https://angular.dev/)
