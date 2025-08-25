@@ -3,8 +3,8 @@
 - Create project folder:
 
 ```bash
-mkdir project-express-js
-cd project-express-js
+mkdir demo-javascript
+cd demo-javascript
 ```
 
 - Init project:

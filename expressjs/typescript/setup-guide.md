@@ -3,8 +3,8 @@
 - Create project folder:
 
 ```bash
-mkdir project-node-setup
-cd project-node-setup
+mkdir demo-typescript
+cd demo-typescript
 ```
 
 - Init project:
@@ -95,9 +95,9 @@ app.listen(PORT, () => {
 
 ```json
 "scripts": {
+  "start": "ts-node src/index.ts",
   "dev": "nodemon --exec ts-node src/index.ts",
-  "build": "tsc",
-  "start": "node dist/index.js"
+  "build": "tsc"
 }
 ```
 
