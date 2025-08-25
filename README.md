@@ -13,9 +13,10 @@ This repository provides a **centralized collection of setup guides** for modern
 
 ### Supported Frameworks
 
-| Framework  | Description                            | Status | Folder                  |
-| ---------- | -------------------------------------- | ------ | ----------------------- |
-| ✅ Angular | Frontend SPA framework with TypeScript | Active | [`angular/`](./angular) |
-| ✅ NestJS  | Backend framework with TypeScript      | Active | [`nestjs/`](./nestjs)   |
+| Framework    | Description                            | Status | Folder                      |
+| ------------ | -------------------------------------- | ------ | --------------------------- |
+| ✅ Angular   | Frontend SPA framework with TypeScript | Active | [`angular/`](./angular)     |
+| ✅ NestJS    | Backend framework with TypeScript      | Active | [`nestjs/`](./nestjs)       |
+| ✅ ExpressJS | Backend framework with TypeScript/JS   | Active | [`expressjs/`](./expressjs) |
 
 ---
