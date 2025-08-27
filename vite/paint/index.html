@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paint</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="paint-tool">
+        <div class="paint-color">
+          <div class="color black" data-color="black" title="Black"></div>
+          <div class="color red" data-color="red" title="Red"></div>
+          <div class="color yellow" data-color="yellow" title="Yellow"></div>
+          <div class="color blue" data-color="blue" title="Blue"></div>
+          <div class="color green" data-color="green" title="Green"></div>
+          <div class="color more" title="More Color">
+            <label for="more-color" id="label-color"></label>
+            <input type="color" id="more-color" value="#000000" />
+          </div>
+        </div>
+
+        <div class="paint-draw">
+          <div class="draw-box">
+            <div class="draw" data-tool="pen" title="Pen">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="draw" data-tool="line" title="Line">
+              <i class="fas fa-ruler"></i>
+            </div>
+            <div class="draw" data-tool="circle" title="Circle">
+              <i class="far fa-circle"></i>
+            </div>
+            <div class="draw" data-tool="rectangle" title="Rectangle">
+              <i class="far fa-square"></i>
+            </div>
+            <div class="draw" data-tool="eraser" title="Eraser">
+              <i class="fas fa-eraser"></i>
+            </div>
+          </div>
+          <div class="draw-size" title="Change Draw-Width">
+            <input type="range" id="inputSize" min="1" max="30" value="5" />
+          </div>
+        </div>
+      </div>
+
+      <div class="canvas-display">
+        <canvas id="canvas"></canvas>
+      </div>
+
+      <div class="control-tool">
+        <div class="tool" id="tutorial" title="Tutorial">
+          <i class="fas fa-question"></i>
+        </div>
+        <div class="tool state bgColor" title="State Background Draw">
+          <i class="fas fa-fill-drip"></i>
+        </div>
+        <div class="tool state colorPaint" title="State Color Draw">
+          <i class="fas fa-paint-brush"></i>
+        </div>
+        <div class="tool state fontSize" title="State Draw-width"></div>
+        <div class="tool" id="clear" title="Clear Canvas">
+          <i class="fas fa-sync-alt"></i>
+        </div>
+        <div class="tool" id="undo" title="Undo">
+          <i class="fas fa-undo-alt"></i>
+        </div>
+        <div class="tool" title="Upload Image">
+          <label for="uploader" id="label-upload">
+            <i class="fas fa-upload"></i>
+          </label>
+          <input type="file" id="uploader" aria-label="Upload image" />
+        </div>
+        <div class="tool" id="download" title="Save Image">
+          <i class="fas fa-save"></i>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
