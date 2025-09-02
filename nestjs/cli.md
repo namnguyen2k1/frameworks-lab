@@ -19,6 +19,55 @@ nest -h
 
 ---
 
+### Postgresql Service (Ubuntu)
+
+```bash
+psql --version
+systemctl status postgresql
+```
+
+---
+
+### Mongodb Service (Ubuntu)
+
+```bash
+mongosh --version
+systemctl status mongod
+```
+
+---
+
+### Redis Service (Ubuntu)
+
+```bash
+redis-server -v
+systemctl status redis
+```
+
+---
+
+### Ubuntu
+
+```bash
+lsb_release -a
+```
+
+---
+
+### Surge
+
+- [Offical Documentation](https://surge.sh/)
+
+```bash
+npm install -g surge
+surge login
+# forgor password: enter empty password x3
+surge list
+surge teardown [project_name]
+```
+
+---
+
 ### References
 
 - [[Guide] NestJs Official Documentation](https://nestjs.com/)
