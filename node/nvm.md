@@ -20,6 +20,13 @@ npm -v # Should print "10.9.3".
 
 ---
 
+```bash
+export NODE_OPTIONS="--max-old-space-size=8192"
+npm cache verify
+```
+
+---
+
 ### References
 
 - [[Homepage] Node](https://nodejs.org/en/download/)
